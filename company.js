@@ -1,6 +1,6 @@
 const faker = require('@faker-js/faker');
 
-class Kompany{
+class Company{
     constructor(){
         this._id = Math.floor(Math.random()* 100);
         this.name = faker.company.companyName();
@@ -11,4 +11,4 @@ class Kompany{
     }
 }
 
-module.exports = Kompany;
+module.exports = Company;

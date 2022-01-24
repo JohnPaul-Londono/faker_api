@@ -1,9 +1,9 @@
-const { Company } = require('@faker-js/faker/lib/company');
+// const { Company } = require('@faker-js/faker/lib/company');
 const express = require('express');
 const app = express();
 const port = 8000;
 const User = require("./user.js");
-const Kompany = require("./company.js");
+const Company = require("./company.js");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -26,11 +26,11 @@ app.get("/api/users/new", (req, res) =>{
 
 app.get("/api/companies/new", (req,res)=>{
 
-    res.json(new Kompany);
+    res.json(new Company);
 })
 
 app.get("/api/user/company", (req, res)=>{
-    res.json({user: new User, company :new Kompany})
+    res.json({user: new User, company :new Company})
 
 })
 
